@@ -1,0 +1,12 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+// The current database to use.
+use('test');
+
+// Create a new document in the collection.
+db.weatther.insert_One({
+    'humidity': 75,
+    'temperature': 30,
+    'date': '2023/6/15 15:20:00'
+})
