@@ -10,12 +10,14 @@
 ## W2
 - 星期二早上開周會之後，下午virgil有教我看bom和一些oracle_client的東西
 - BOM(bill of material) / WIP(work in process)
-- 幾種item代號:
+- 幾種item代號(item where use):
   - 95 外包、跨廠、包裝貼標最後一步
   - 81 91 wnc半成品
   - 57 / 60 半成品
   - 55
   - 60 燒錄ic
+  - 71/72/73/21/64/68 原物料raw material
+  
 - 4種supply type : aseembly pull,pull,push,phantom
   以下是對供應類型（Supply Type）的解釋：
   - Pull（拉式供應）：這是一種根據需求來驅動供應的方式。當產品需要時，拉式供應會觸發從供應鏈上游到下游的物料流動。這種供應方式通常基於實際需求和客戶訂單，以避免庫存過剩和浪費。
@@ -26,3 +28,7 @@
 這些供應類型在供應鏈管理中扮演著不同的角色，並根據產品特性、需求變化以及製造過程的要求來選擇適當的供應方式。
 - 展bom顯示幾個階層
 - 用python把連線還有轉檔搞定，pandas套件把xlsx json csv tsv釐清關係
+
+QA未來可能遇到的問題:
+工程改變命令（英語： Engineering change orders，縮寫ECO)
+到時候整個改變會動到結構，這時候MongoDB可能就會有優勢
