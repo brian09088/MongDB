@@ -17,7 +17,17 @@
   - 55
   - 60 燒錄ic
   - 71/72/73/21/64/68 原物料raw material
-  
+- WIP_SUPPLY_TYPE 編號對應
+
+| Value | Meaning |
+| --- | ------- |
+|1|Push|
+|2|Assembly Pull|
+|3|Operation Pull|
+|4|Bulk|
+|5|Supplier|
+|6|Phantom|
+|7|Based on Bill|
 - 4種supply type : aseembly pull,pull,push,phantom
   以下是對供應類型（Supply Type）的解釋：
   - Pull（拉式供應）：這是一種根據需求來驅動供應的方式。當產品需要時，拉式供應會觸發從供應鏈上游到下游的物料流動。這種供應方式通常基於實際需求和客戶訂單，以避免庫存過剩和浪費。
