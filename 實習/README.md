@@ -1,5 +1,4 @@
 # 一些日記
-## [發問](https://www.dcard.tw/f/softwareengineer/p/251268176)
 ## W1
 - 報到跟簽文件
 - 上課還有一些適應與茶會
