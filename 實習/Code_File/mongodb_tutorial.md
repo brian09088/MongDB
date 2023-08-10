@@ -1,6 +1,6 @@
-# 安裝教學與基礎設定
+# 安裝教學與基礎設定(詳見Word檔案)
 主要在MongoDB 6.0版本上運行，社群基本版(.msi)
-雲端數據資料庫(MongoDB Atlas)-免費試用版(25MB)
+雲端數據資料庫(MongoDB Atlas)-免費試用版(512MB~5GB)
 - 可配合安裝幾個軟體
   - MongoDB Compass
   - Studio 3T
