@@ -1,5 +1,7 @@
 # Action List
 
+![實習日程](https://github.com/brian09088/MongoDB/assets/72643996/4bc1066a-652b-4f72-ad13-f81814707787)
+
 - Setup
 - BOM Introduction
 - BOM Transfer to Mongo Format
