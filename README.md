@@ -1,6 +1,6 @@
 # MongoDB
 NoSQL database
-
+- MongoDB 7.0以上版本，添加一個稱為可查詢加密（Queryable Encryption）功能，顧名思義，當MongoDB啟用Queryable Encryption功能，就能使加密資料不事先解密，就可以對其進行查詢。此項MongoDB內建加密功能，使組織能夠在資料受保護的情況下，查詢和使用敏感資料，在高度敏感的應用程式工作流程，諸如財務交易和分析醫療紀錄，降低資料外洩風險。
 ## 參考書籍
 - GOTOP : MongoDB 5.x 實戰應用
 - [Book Resource GitHub_link](https://github.com/kirkchu/mongodb)
