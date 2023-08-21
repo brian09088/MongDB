@@ -34,6 +34,8 @@ $ bin/mongod –dbpath ~/db
 也可以從mongod.config文件中修改達成遠端連線，修改BIND-ip(預設127.0.0.1後面可新增其他ip)，修改後重新啟動才會生效，服務要關閉自動開啟，架設好之後便改成手動開啟避免自動關閉。
 ![image](https://github.com/brian09088/MongoDB/assets/72643996/01b521b4-bf08-42c4-b3f1-29dfbd862252)
 ![image](https://github.com/brian09088/MongoDB/assets/72643996/08f47789-d1b9-4b5c-800d-792359ec5b68)
+3.	修改後，目前所有電腦可以透過url去做遠端連線並取得資料庫資料:
+mongodb://localhost:27017/
 
 <另解> 下指令:
 ```
