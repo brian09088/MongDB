@@ -1,0 +1,11 @@
+influxDB:172.16.100.47:8086
+account: ERP
+pw: erpadmin123
+
+prometheus:172.16.100.47:9090
+
+Grafana: 172.16.100.47:3000
+account:admin
+pw: admin
+
+
