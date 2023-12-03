@@ -1,0 +1,153 @@
+{
+	// Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	"PYInitLib": {
+		
+		"prefix": "PYInitLib",
+		"body": [
+			"import datetime as dt",
+			"import cx_Oracle",
+			"import pandas as pd ",
+			"import sqlalchemy #for panda + CX_ORacle",
+			"import importlib",
+			"import logging",
+			"import math",
+			"pd.set_option('display.float_format',lambda x : '%.2f' % x) #處理科學符號顯示問題",
+			"import getpass",
+			"import win32com.client",
+			"import datetime as dt",
+			"import time",
+			"from datetime import datetime, timedelta",
+			"",
+			"import numpy as np",
+			"from os import listdir",
+			"from os.path import isfile, isdir, join",
+			"import sys",
+			"import json",
+			"sys.path.append(r\"D:\\SOP\")",
+			
+			
+			"## 注意 如果有Recompile 要清掉pycache class define 乾 害我踩地雷",
+			"import Key_DB_Class",
+			"importlib.reload(Key_DB_Class)",
+			"from Key_DB_Class import DB_Connection",
+			"from Key_DB_Class import TXN_Message",
+			"from Key_DB_Class import DB_TXN_Adopter",
+			"",
+            "txn_MSG =TXN_Message()",
+            "txn_MSG.CurrentDataFlowName='YourFlowName'",
+
+			"todayStr =dt.datetime.today().strftime('%Y-%m-%d')",
+			"logPath =\"Log\"+\"\\\\\\\\\" +todayStr+ \".log\" ",
+			"logging.basicConfig(filename=logPath, encoding='utf-8', ",
+			"    level=logging.INFO,",
+			"    format='%(asctime)s - %(funcName)s-%(lineno)d - %(levelname)s - %(message)s',",
+			"    datefmt='%Y-%m-%d %H:%M:%S'",
+			")",			
+		],
+		"description": "Python 常用Libary"
+	},
+	"DBConnection": {
+		
+		"prefix": "DB_ConnectionClass",
+		"body": [
+            "DBNameAtUserName_Conn = DB_Connection()",
+            "DBNameAtUserName_Conn.UserName='XXX'",
+            "DBNameAtUserName_Conn.PassWord='YYY'",
+            "DBNameAtUserName_Conn.Database='TNS_NAME'",
+			"",
+			"",
+
+			
+		],
+		"description": "Python 常用DBConnection Class"
+	},
+	"GetOracleDirectSQLDF": {
+		
+		"prefix": "OracleDFDirectSQL",
+		"body": [
+			"SQL= \"\"\" ",
+			"",
+			"\"\"\" ",
+			"DF =DB_TXN_Adopter.GetOracle_DF(DBNameAtUserName_Conn,SQL,txn_MSG)",
+
+		],
+		"description": "Python 直接取DBSQL來源到DF框架"
+	},	
+	"GetOracleRelationPathSQLDF": {
+		
+		"prefix": "OracleDFByDirectPathSQL",
+		"body": [
+			"SQL=DB_TXN_Adopter.ReadSQLByRelationPath(r\"C:\\Users\\yourpath.sql \") ",        
+			"DF =DB_TXN_Adopter.GetOracle_DF(DBNameAtUserName_Conn,SQL,txn_MSG)",
+	
+		],
+		"description": "Python 透過相對路取DBSQL來源到DF框架"
+	},
+	"OracleConnectionwithERP_PROD": {
+		
+		"prefix": "ERP_PROD",
+		"body": [
+			"ERPTWAtXXERP_Conn = DB_Connection()",
+			"ERPTWAtXXERP_Conn.UserName='XXERP'",
+			"ERPTWAtXXERP_Conn.PassWord='Global_ERP'",
+			"ERPTWAtXXERP_Conn.Database='ERP_PROD_ERPDB1'",
+			"",
+			"ERPTWAtXXWNC_Conn = DB_Connection()",
+			"ERPTWAtXXWNC_Conn.UserName='XXWNC'",
+			"ERPTWAtXXWNC_Conn.PassWord='XXWNC'",
+			"ERPTWAtXXWNC_Conn.Database='ERP_PROD_ERPDB1'",
+			"",
+			"ERPDWAtXXWNC_Conn = DB_Connection()",
+			"ERPDWAtXXWNC_Conn.UserName='XXWNC'",
+			"ERPDWAtXXWNC_Conn.PassWord='XXWNC'",
+			"ERPDWAtXXWNC_Conn.Database='ERPDW.WNEWEB.COM.TW'",
+	
+		],
+		"description": "Python 常用DB連線....with Class"
+	},	
+	"GetDistinct DF":{
+
+		"prefix": ["Distinct","Drop Duplicate"],
+		"body": [
+			"Duplicate_ORG_ITEM_DF.drop_duplicates(['ITEM_NAME','ORGANIZATION_CODE'],keep=\"last\" )",
+	
+		],
+		"description": "For Get Distinct"
+
+		
+	},
+	"Class within List directly to DF":{
+
+		"prefix": ["Class List to DF"],
+		"body": [
+            "# Create a list of dictionaries representing the attributes of each object",
+            "data = [obj.__dict__ for obj in Clientfile_List]",
+            "",
+            "# Convert the list of dictionaries to a dataframe",
+            "df = pd.DataFrame(data)",
+	
+		],
+		"description": "Class within List directly to DF"
+
+		
+	}	,
+	"DataFrame SUM":{
+		"prefix": "GroupbySum",
+		"body": [
+			"group_col=['col1','col2','col3']",
+			"sum_col=['measure1','measure2']",
+			"sum_df =RawdataDF.groupby(group_col)[sum_col].sum().reset_index()",
+		],
+		"description": "懶人Quickly SUM by pandas"
+		
+
+
+	}
+	
+}

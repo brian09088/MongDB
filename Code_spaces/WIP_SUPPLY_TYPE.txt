@@ -1,0 +1,9 @@
+
+Value	Meaning
+1	Push
+2	Assembly Pull
+3	Operation Pull
+4	Bulk
+5	Supplier
+6	Phantom
+7	Based on Bill
