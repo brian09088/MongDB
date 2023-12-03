@@ -1,12 +1,11 @@
-# 一些日記
-## W1
-- 報到跟簽文件
-- 上課還有一些適應與茶會
-- mongoDB compass最後想到要安裝msi封裝黨整包套件裝下去
+## On Board
+- 報到、簽文件
+- LMS上課、適應教育
+- mongoDB compass最後想到要安裝msi封裝檔整包套件裝下去
 - 在最後還好wade有幫我把AP server環境的VS-code還有python虛擬環境建好
 - 防火牆不要隨便關閉
 - server測試環境不要任意重啟
-## W2
+## weekly review & keeps
 - 星期二早上開周會之後，下午virgil有教我看bom和一些oracle_client的東西
 - BOM(bill of material) / WIP(work in process)
 - 幾種item代號(item where use):
